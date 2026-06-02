@@ -16,7 +16,7 @@
       <path d="M14 2v4M14 22v4M2 14h4M22 14h4" stroke="#22c55e" stroke-width="2" stroke-linecap="round"/>
       <path d="M5.5 5.5l2.8 2.8M19.7 19.7l2.8 2.8M5.5 22.5l2.8-2.8M19.7 8.3l2.8-2.8" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round"/>
     </svg>
-    FireWatch
+    FireWatcher
   </a>
   <ul class="nav-links">
     <li><a href="#problema">Problema</a></li>
@@ -31,5 +31,86 @@
     <span></span><span></span><span></span>
   </div>
 </nav>
+
+
+<section id="problema" style="padding:0">
+  <div id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-inner container">
+      <div class="hero-content fade-up">
+        <div class="hero-badge">
+          <span></span>Sistema em desenvolvimento
+        </div>
+        <h1 class="hero-title">
+          O Brasil queima.<br/>
+          <span class="accent">Nós prevemos</span><br/>
+          antes do fogo.
+        </h1>
+        <p class="hero-desc">
+          Em 2023, o Brasil registrou mais de <strong>220 mil focos</strong> de incêndio.
+          Os sistemas atuais são <em>reativos</em> — detectam quando o desastre já começou.
+          O FireWatcher prevê o risco com até <strong>72 horas de antecedência</strong> usando dados de satélite.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">220k+</div>
+            <div class="stat-label">focos em 2023</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">72h</div>
+            <div class="stat-label">antecedência</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">91%</div>
+            <div class="stat-label">precisão preditiva</div>
+          </div>
+        </div>
+        <div class="hero-btns">
+          <a href="#tecnologia" class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            Conheça a Solução
+          </a>
+          <a href="#demo" class="btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Ver Demo
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual fade-up" style="animation-delay:.2s">
+        <div class="map-card" style="position:relative">
+          <div class="alert-badge">⚠ 3 ALERTAS ATIVOS</div>
+          <div class="map-header">
+            <div class="map-dot" style="background:#ef4444"></div>
+            <div class="map-dot" style="background:#eab308"></div>
+            <div class="map-dot" style="background:#22c55e"></div>
+            <span style="margin-left:.3rem">FIREWATCHER — MONITOR ORBITAL</span>
+          </div>
+          <div class="map-body">
+            <svg class="brazil-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M100 20 L140 25 L165 40 L180 70 L175 100 L160 120 L150 150 L130 170 L110 180 L90 175 L70 160 L55 140 L40 120 L30 90 L35 60 L55 40 L80 25 Z" fill="rgba(34,197,94,0.08)" stroke="rgba(34,197,94,0.25)" stroke-width="1.5"/>
+              <path d="M60 60 L80 55 L90 65 L85 80 L70 75 Z" fill="rgba(34,197,94,0.05)" stroke="rgba(34,197,94,0.15)" stroke-width="1"/>
+            </svg>
+            <!-- Fire dots positioned over Brazil -->
+            <div class="fire-dot red" style="top:42%;left:58%"></div>
+            
+            <div class="fire-dot yellow" style="top:38%;left:52%;animation-delay:.3s"></div>
+            <div class="fire-dot orange" style="top:60%;left:50%;animation-delay:.9s"></div>
+            
+          </div>
+          <div class="map-footer">
+            <div class="legend-item"><div class="legend-dot" style="background:#ef4444"></div>Crítico</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#f97316"></div>Alto</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#eab308"></div>Moderado</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#22c55e"></div>Baixo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 </body>
 </html>

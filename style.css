@@ -20,6 +20,8 @@
 html{scroll-behavior:smooth;font-size:16px}
 body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.6;overflow-x:hidden}
 
+.container{max-width:1200px;margin:0 auto}
+
 #navbar{
   position:fixed;top:0;left:0;right:0;z-index:1000;
   display:flex;align-items:center;justify-content:space-between;
@@ -162,6 +164,35 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-he
   animation:badge-float 3s ease-in-out infinite;
 }
 @keyframes badge-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+
+#aplicacao{background:var(--bg)}
+.flow-steps{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:0;position:relative;
+}
+.flow-steps::before{
+  content:'';position:absolute;top:40px;left:0;right:0;height:2px;
+  background:linear-gradient(90deg, transparent, var(--green-dim), transparent);
+}
+.flow-step{
+  text-align:center;padding:1.5rem 1rem;position:relative;
+}
+.step-circle{
+  width:80px;height:80px;border-radius:50%;
+  background:var(--surface);border:2px solid var(--green-dim);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.6rem;margin:0 auto 1rem;
+  transition:.3s;position:relative;z-index:1;
+  background:var(--bg);
+}
+.flow-step:hover .step-circle{border-color:var(--green);box-shadow:0 0 20px rgba(34,197,94,.2)}
+.flow-step h4{font-size:.88rem;font-weight:700;margin-bottom:.3rem}
+.flow-step p{color:var(--muted);font-size:.78rem;line-height:1.5}
+.flow-arrow{
+  position:absolute;right:-14px;top:32px;
+  color:var(--green-dim);font-size:1.2rem;z-index:2;
+  display:none;
+}
 
 footer{
   background:var(--surface);border-top:1px solid var(--border);

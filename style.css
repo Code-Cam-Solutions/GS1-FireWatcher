@@ -1,4 +1,4 @@
-/* ─── RESET & TOKENS ────────────────────────────────────────────── */
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bg:        #0a0e17;
@@ -132,7 +132,7 @@ section{padding:6rem 2rem}
 }
 .btn-outline:hover{border-color:var(--green);color:var(--green)}
 
-/* Hero map visual */
+
 .hero-visual{position:relative}
 .map-card{
   background:var(--surface);border:1px solid var(--border);
@@ -177,6 +177,39 @@ section{padding:6rem 2rem}
   animation:badge-float 3s ease-in-out infinite;
 }
 @keyframes badge-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+
+
+#tecnologia{background:var(--surface)}
+.tech-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;
+}
+.tech-card{
+  background:var(--bg);border:1px solid var(--border);
+  border-radius:12px;padding:1.8rem;
+  transition:all .3s;cursor:default;
+  position:relative;overflow:hidden;
+}
+.tech-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(34,197,94,0.04) 0%,transparent 60%);
+  opacity:0;transition:.3s;
+}
+.tech-card:hover{border-color:rgba(34,197,94,0.3);transform:translateY(-4px)}
+.tech-card:hover::before{opacity:1}
+.tech-icon{
+  width:48px;height:48px;border-radius:10px;
+  background:rgba(34,197,94,0.1);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:1.2rem;font-size:1.4rem;
+}
+.tech-card h3{font-size:1.05rem;font-weight:700;margin-bottom:.5rem}
+.tech-card p{color:var(--muted);font-size:.88rem;line-height:1.6}
+.tech-tag{
+  display:inline-block;margin-top:.9rem;
+  font-family:var(--font-mono);font-size:.68rem;
+  background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.15);
+  color:var(--green);padding:.2rem .6rem;border-radius:4px;
+}
 
 #beneficios{
   background:linear-gradient(135deg,#0d1f14 0%,#0a1220 50%,#130e08 100%);

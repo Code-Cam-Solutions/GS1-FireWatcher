@@ -194,6 +194,32 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-he
   display:none;
 }
 
+.example-box{
+  margin-top:3rem;
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:16px;padding:2rem;
+  display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;
+}
+.example-data{display:flex;flex-direction:column;gap:.5rem}
+.ex-title{font-family:var(--font-mono);font-size:.72rem;color:var(--muted);margin-bottom:.3rem;text-transform:uppercase;letter-spacing:.1em}
+.ex-tag{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-family:var(--font-mono);font-size:.8rem;
+  background:var(--surface2);border:1px solid var(--border);
+  padding:.3rem .8rem;border-radius:5px;width:fit-content;
+}
+.critical-alert{
+  background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.25);
+  border-radius:12px;padding:1.5rem;text-align:center;min-width:160px;
+}
+.crit-pct{font-family:var(--font-head);font-size:2.5rem;font-weight:800;color:var(--red)}
+.crit-label{font-family:var(--font-mono);font-size:.68rem;color:var(--red);text-transform:uppercase;letter-spacing:.1em}
+.crit-badge{
+  display:inline-block;background:var(--red);color:#fff;
+  font-family:var(--font-mono);font-size:.7rem;font-weight:700;
+  padding:.3rem .8rem;border-radius:4px;margin-top:.6rem;
+}
+
 footer{
   background:var(--surface);border-top:1px solid var(--border);
   padding:3rem 2rem;

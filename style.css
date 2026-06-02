@@ -162,3 +162,32 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-he
   animation:badge-float 3s ease-in-out infinite;
 }
 @keyframes badge-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+
+footer{
+  background:var(--surface);border-top:1px solid var(--border);
+  padding:3rem 2rem;
+}
+.footer-inner{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:3rem;
+  align-items:start;
+}
+.footer-brand .nav-logo{margin-bottom:.75rem;font-size:1.1rem}
+.footer-brand p{color:var(--muted);font-size:.85rem;line-height:1.6;max-width:280px}
+.footer-year{
+  font-family:var(--font-mono);font-size:.72rem;color:var(--muted);
+  margin-top:1rem;
+}
+.footer-team h4{font-size:.85rem;font-weight:700;margin-bottom:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-family:var(--font-mono)}
+.team-list{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.team-list li{
+  font-size:.88rem;color:var(--text);
+  display:flex;align-items:center;gap:.5rem;
+}
+.team-list li::before{content:'—';color:var(--green);font-family:var(--font-mono)}
+.footer-bottom{
+  max-width:1200px;margin:2rem auto 0;
+  padding-top:1.5rem;border-top:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--font-mono);font-size:.72rem;color:var(--muted);
+}

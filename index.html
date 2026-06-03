@@ -159,7 +159,7 @@
 <section id="objetivos" style="background:var(--bg)">
   <div class="container">
     <span class="section-tag fade-up">// objetivos</span>
-    <h2 class="section-title fade-up">O Que o FireWatch se Propõe a Fazer</h2>
+    <h2 class="section-title fade-up">O Que o FireWatcher se Propõe a Fazer</h2>
     <p class="section-sub fade-up">Quatro pilares que transformam dados brutos de satélite em ação preventiva concreta.</p>
     <div class="objectives-wrap">
       <div class="obj-card fade-up">
@@ -200,10 +200,47 @@
   </div>
 </section>
 
+<section id="quiz">
+  <div class="container">
+    <span class="section-tag fade-up" style="text-align:center;display:block">// quiz interativo</span>
+    <h2 class="section-title fade-up" style="text-align:center">Quanto Você Sabe sobre Queimadas?</h2>
+    <p class="section-sub fade-up" style="text-align:center;margin:0 auto 2.5rem">Teste seus conhecimentos sobre monitoramento ambiental, satélites e prevenção de incêndios.</p>
+    <div class="quiz-wrap fade-up" id="quizContainer">
+      <!-- Question screen -->
+      <div id="questionScreen">
+        <div class="quiz-header">
+          <span class="quiz-label" id="questionLabel">Pergunta 1 de 10</span>
+          <span class="quiz-score" id="scoreDisplay">Pontos: 0</span>
+        </div>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar" id="progressBar" style="width:10%"></div>
+        </div>
+        <p class="quiz-question" id="questionText"></p>
+        <div class="quiz-options" id="optionsContainer"></div>
+        <div class="quiz-feedback" id="quizFeedback"></div>
+        <button class="quiz-next" id="nextBtn" onclick="nextQuestion()">Próxima Pergunta →</button>
+      </div>
+      <!-- Result screen -->
+      <div class="quiz-result" id="resultScreen">
+        <div class="result-ring" id="resultRing">
+          <div class="result-ring-inner">
+            <span class="result-score-num" id="resultNum">0</span>
+            <span class="result-score-total">de 10</span>
+          </div>
+        </div>
+        <div class="result-badge" id="resultBadge"></div>
+        <h3 class="result-title" id="resultTitle"></h3>
+        <p class="result-msg" id="resultMsg"></p>
+        <button class="quiz-restart" onclick="restartQuiz()">↺ Recomeçar</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="publico">
   <div class="container">
     <span class="section-tag fade-up">// público-alvo</span>
-    <h2 class="section-title fade-up">Quem Protegemos com o FireWatch</h2>
+    <h2 class="section-title fade-up">Quem Protegemos com o FireWatcher</h2>
     <p class="section-sub fade-up">A solução impacta diretamente quem precisa agir rápido diante do risco ambiental — de agentes de campo a gestores públicos.</p>
     <div class="audience-grid">
       <div class="audience-card fade-up">
@@ -324,7 +361,7 @@
           <div class="topbar-dot" style="background:#ef4444"></div>
           <div class="topbar-dot" style="background:#eab308"></div>
           <div class="topbar-dot" style="background:#22c55e"></div>
-          <span class="topbar-title">FIREWATCH — SISTEMA DE MONITORAMENTO AMBIENTAL</span>
+          <span class="topbar-title">FIREWATCHER — SISTEMA DE MONITORAMENTO AMBIENTAL</span>
         </div>
         <video autoplay muted loop playsinline>
           <source src="./assets/demo-firewatcher.mp4" type="video/mp4">
@@ -337,7 +374,7 @@
 <section id="aplicacao">
   <div class="container">
     <span class="section-tag fade-up">// aplicação no dia a dia</span>
-    <h2 class="section-title fade-up">Como o FireWatch Funciona na Prática</h2>
+    <h2 class="section-title fade-up">Como o FireWatcher Funciona na Prática</h2>
     <p class="section-sub fade-up">Do dado bruto de satélite à ação preventiva em campo: um fluxo contínuo e automatizado.</p>
     <div class="flow-steps">
       <div class="flow-step fade-up">
@@ -402,10 +439,10 @@
           <path d="M14 2v4M14 22v4M2 14h4M22 14h4" stroke="#22c55e" stroke-width="2" stroke-linecap="round"/>
           <path d="M5.5 5.5l2.8 2.8M19.7 19.7l2.8 2.8M5.5 22.5l2.8-2.8M19.7 8.3l2.8-2.8" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
-        FireWatch
+        FireWatcher
       </div>
       <p>Sistema Preditivo de Queimadas por Sensoriamento Orbital. Monitoramento ambiental inteligente para um Brasil menos vulnerável.</p>
-      <div class="footer-year">© 2025 · FireWatch Project</div>
+      <div class="footer-year">© 2025 · FireWatcher Project</div>
     </div>
     <div class="footer-team">
       <h4>Integrantes do Grupo</h4>
@@ -419,8 +456,8 @@
     </div>
   </div>
   <div class="footer-bottom container">
-    <span>FireWatch · Sistema de Monitoramento Ambiental</span>
-    <span>Desenvolvido como projeto acadêmico · 2025</span>
+    <span>FireWatcher · Sistema de Monitoramento Ambiental</span>
+    <span>Desenvolvido como projeto acadêmico · 2026</span>
   </div>
 </footer>
 <script src="script.js"></script>

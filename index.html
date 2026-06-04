@@ -26,11 +26,35 @@
     <li><a href="#beneficios">Benefícios</a></li>
     <li><a href="#aplicacao">Aplicação</a></li>
   </ul>
-  <a href="#demo" class="nav-cta">Ver Demo</a>
+  <div style="display:flex;align-items:center;gap:.75rem">
+    <!-- Theme Switcher -->
+    <div class="theme-switcher" id="themeSwitcher">
+      <button class="theme-btn" id="themeBtn" onclick="toggleThemeDropdown()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <span id="themeBtnLabel">Tema</span>
+      </button>
+      <div class="theme-dropdown" id="themeDropdown">
+        <button class="theme-option active" id="opt-dark" onclick="setTheme('dark')">
+          <span class="swatch swatch-dark"></span> Dark
+        </button>
+        <button class="theme-option" id="opt-light" onclick="setTheme('light')">
+          <span class="swatch swatch-light"></span> Light
+        </button>
+        <button class="theme-option" id="opt-ocean" onclick="setTheme('ocean')">
+          <span class="swatch swatch-ocean"></span> Ocean
+        </button>
+      </div>
+    </div>
+    <a href="#demo" class="nav-cta">Ver Demo</a>
+  </div>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
 </nav>
+
 
 
 <section id="problema" style="padding:0">
@@ -442,7 +466,7 @@
         FireWatcher
       </div>
       <p>Sistema Preditivo de Queimadas por Sensoriamento Orbital. Monitoramento ambiental inteligente para um Brasil menos vulnerável.</p>
-      <div class="footer-year">© 2025 · FireWatcher Project</div>
+      <div class="footer-year">© 2026 · FireWatcher Project</div>
     </div>
     <div class="footer-team">
       <h4>Integrantes do Grupo</h4>

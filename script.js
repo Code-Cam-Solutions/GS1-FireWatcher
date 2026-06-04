@@ -197,3 +197,85 @@ function toggleMenu() {
 
 
 renderQuestion();
+
+// ─── THEME SWITCHER ──────────────────────────────────────────────
+const THEMES = {
+  dark:   { label: 'Dark',   icon: '🌑' },
+  light:  { label: 'Light',  icon: '☀️'  },
+  ocean:  { label: 'Ocean',  icon: '🌊' },
+};
+
+const NAVBAR_BG = {
+  dark:   { base: 'rgba(10,14,23,0.85)',  scrolled: 'rgba(10,14,23,0.97)'   },
+  light:  { base: 'rgba(248,250,252,0.9)', scrolled: 'rgba(248,250,252,0.98)' },
+  ocean:  { base: 'rgba(3,13,26,0.88)',   scrolled: 'rgba(3,13,26,0.97)'    },
+};
+ 
+let currentTheme = localStorage.getItem('fw-theme') || 'dark';
+ 
+function applyTheme(theme) {
+  // Set data-theme on <html>
+  document.documentElement.setAttribute('data-theme', theme === 'dark' ? '' : theme);
+  if (theme === 'dark') {
+    document.documentElement.removeAttribute('data-theme');
+  } else {
+    document.documentElement.setAttribute('data-theme', theme);
+  }
+ 
+  // Update button label
+  const t = THEMES[theme] || THEMES.dark;
+  const lbl = document.getElementById('themeBtnLabel');
+  if (lbl) lbl.textContent = t.icon + ' ' + t.label;
+ 
+  // Update active state on options
+  Object.keys(THEMES).forEach(k => {
+    const opt = document.getElementById('opt-' + k);
+    if (opt) opt.classList.toggle('active', k === theme);
+  });
+ 
+  // Fix navbar background immediately based on scroll position
+  updateNavbarBg(theme);
+ 
+  // Persist choice
+  localStorage.setItem('fw-theme', theme);
+  currentTheme = theme;
+}
+ 
+function setTheme(theme) {
+  applyTheme(theme);
+  closeThemeDropdown();
+}
+ 
+function toggleThemeDropdown() {
+  const dd = document.getElementById('themeDropdown');
+  if (dd) dd.classList.toggle('open');
+}
+ 
+function closeThemeDropdown() {
+  const dd = document.getElementById('themeDropdown');
+  if (dd) dd.classList.remove('open');
+}
+ 
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+  const switcher = document.getElementById('themeSwitcher');
+  if (switcher && !switcher.contains(e.target)) {
+    closeThemeDropdown();
+  }
+});
+ 
+// ─── NAVBAR SCROLL (theme-aware override) ────────────────────────
+function updateNavbarBg(theme) {
+  const nb = document.getElementById('navbar');
+  if (!nb) return;
+  const bg = NAVBAR_BG[theme] || NAVBAR_BG.dark;
+  nb.style.background = window.scrollY > 50 ? bg.scrolled : bg.base;
+}
+ 
+// Override the previous scroll listener to be theme-aware
+window.removeEventListener('scroll', window._fwScrollHandler);
+window._fwScrollHandler = () => updateNavbarBg(currentTheme);
+window.addEventListener('scroll', window._fwScrollHandler);
+ 
+// ─── INIT THEME ──────────────────────────────────────────────────
+applyTheme(currentTheme);

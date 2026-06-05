@@ -1,24 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>FireWatcher: Sistema Preditivo de Queimadas</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css"/>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FireWatcher: Sistema Preditivo de Queimadas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <nav id="navbar">
-  <a href="#hero" class="nav-logo">
-    <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="14" cy="14" r="6" stroke="#22c55e" stroke-width="2"/>
-      <path d="M14 2v4M14 22v4M2 14h4M22 14h4" stroke="#22c55e" stroke-width="2" stroke-linecap="round"/>
-      <path d="M5.5 5.5l2.8 2.8M19.7 19.7l2.8 2.8M5.5 22.5l2.8-2.8M19.7 8.3l2.8-2.8" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round"/>
-    </svg>
-    FireWatcher
-  </a>
-  <ul class="nav-links">
+      <a href="#hero" class="nav-logo">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="14" cy="14" r="6" stroke="#22c55e" stroke-width="2" />
+          <path
+            d="M14 2v4M14 22v4M2 14h4M22 14h4"
+            stroke="#22c55e"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M5.5 5.5l2.8 2.8M19.7 19.7l2.8 2.8M5.5 22.5l2.8-2.8M19.7 8.3l2.8-2.8"
+            stroke="#22c55e"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+        </svg>
+        FireWatcher
+      </a>
+      <ul class="nav-links">
         <li><a href="#problema">Problema</a></li>
         <li><a href="#tecnologia">Tecnologia</a></li>
         <li><a href="#objetivos">Objetivos</a></li>
@@ -28,427 +41,539 @@
         <li><a href="#demo">Demonstração</a></li>
         <li><a href="#aplicacao">Aplicação</a></li>
         <li><a href="#newsletter">Newsletter</a></li>
-  </ul>
-  <div style="display:flex;align-items:center;gap:.75rem">
-    <!-- Theme Switcher -->
-    <div class="theme-switcher" id="themeSwitcher">
-      <button class="theme-btn" id="themeBtn" onclick="toggleThemeDropdown()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="4"/>
-          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
-        </svg>
-        <span id="themeBtnLabel">Tema</span>
-      </button>
-      <div class="theme-dropdown" id="themeDropdown">
-        <button class="theme-option active" id="opt-dark" onclick="setTheme('dark')">
-          <span class="swatch swatch-dark"></span> Dark
-        </button>
-        <button class="theme-option" id="opt-light" onclick="setTheme('light')">
-          <span class="swatch swatch-light"></span> Light
-        </button>
-        <button class="theme-option" id="opt-ocean" onclick="setTheme('ocean')">
-          <span class="swatch swatch-ocean"></span> Ocean
-        </button>
-      </div>
-    </div>
-    <a href="#demo" class="nav-cta">Ver Demo</a>
-  </div>
-  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
-  </div>
-</nav>
-
-
-
-<section id="problema" style="padding:0">
-  <div id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
-    <div class="hero-inner container">
-      <div class="hero-content fade-up">
-        <div class="hero-badge">
-          <span></span>Sistema em desenvolvimento
-        </div>
-        <h1 class="hero-title">
-          O Brasil queima.<br/>
-          <span class="accent">Nós prevemos</span><br/>
-          antes do fogo.
-        </h1>
-        <p class="hero-desc">
-          Em 2023, o Brasil registrou mais de <strong>220 mil focos</strong> de incêndio.
-          Os sistemas atuais são <em>reativos</em> — detectam quando o desastre já começou.
-          O FireWatcher prevê o risco com até <strong>72 horas de antecedência</strong> usando dados de satélite.
-        </p>
-        <div class="hero-stats">
-          <div class="stat">
-            <div class="stat-num">220k+</div>
-            <div class="stat-label">focos em 2023</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">72h</div>
-            <div class="stat-label">antecedência</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">91%</div>
-            <div class="stat-label">precisão preditiva</div>
-          </div>
-        </div>
-        <div class="hero-btns">
-          <a href="#tecnologia" class="btn-primary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            Conheça a Solução
-          </a>
-          <a href="#demo" class="btn-outline">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            Ver Demo
-          </a>
-        </div>
-      </div>
-      <div class="hero-visual fade-up" style="animation-delay:.2s">
-        <div class="map-card" style="position:relative">
-          <div class="alert-badge">⚠ 3 ALERTAS ATIVOS</div>
-          <div class="map-header">
-            <div class="map-dot" style="background:#ef4444"></div>
-            <div class="map-dot" style="background:#eab308"></div>
-            <div class="map-dot" style="background:#22c55e"></div>
-            <span style="margin-left:.3rem">FIREWATCHER — MONITOR ORBITAL</span>
-          </div>
-          <div class="map-body">
-            <svg class="brazil-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M100 20 L140 25 L165 40 L180 70 L175 100 L160 120 L150 150 L130 170 L110 180 L90 175 L70 160 L55 140 L40 120 L30 90 L35 60 L55 40 L80 25 Z" fill="rgba(34,197,94,0.08)" stroke="rgba(34,197,94,0.25)" stroke-width="1.5"/>
-              <path d="M60 60 L80 55 L90 65 L85 80 L70 75 Z" fill="rgba(34,197,94,0.05)" stroke="rgba(34,197,94,0.15)" stroke-width="1"/>
+      </ul>
+      <div style="display: flex; align-items: center; gap: 0.75rem">
+        <!-- Theme Switcher -->
+        <div class="theme-switcher" id="themeSwitcher">
+          <button
+            class="theme-btn"
+            id="themeBtn"
+            onclick="toggleThemeDropdown()"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+              />
             </svg>
-            <!-- Fire dots positioned over Brazil -->
-            <div class="fire-dot red" style="top:42%;left:58%"></div>
-            
-            <div class="fire-dot yellow" style="top:38%;left:52%;animation-delay:.3s"></div>
-            <div class="fire-dot orange" style="top:60%;left:50%;animation-delay:.9s"></div>
-            
-          </div>
-          <div class="map-footer">
-            <div class="legend-item"><div class="legend-dot" style="background:#ef4444"></div>Crítico</div>
-            <div class="legend-item"><div class="legend-dot" style="background:#f97316"></div>Alto</div>
-            <div class="legend-item"><div class="legend-dot" style="background:#eab308"></div>Moderado</div>
-            <div class="legend-item"><div class="legend-dot" style="background:#22c55e"></div>Baixo</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="tecnologia">
-  <div class="container">
-    <span class="section-tag fade-up">// tecnologia</span>
-    <h2 class="section-title fade-up">O Satélite Vê o que o Olho Não Vê</h2>
-    <p class="section-sub fade-up">Seis variáveis ambientais capturadas por sensoriamento orbital são cruzadas em tempo real para calcular o risco de incêndio com precisão inédita.</p>
-    <div class="tech-grid">
-      <div class="tech-card fade-up">
-        <div class="tech-icon">🌡️</div>
-        <h3>Temperatura Superficial</h3>
-        <p>Satélites medem radiação térmica emitida pela superfície. Áreas com temperatura muito acima do normal indicam condição propícia ao fogo.</p>
-        <span class="tech-tag">TERRA/MODIS · LST</span>
-      </div>
-      <div class="tech-card fade-up">
-        <div class="tech-icon">💧</div>
-        <h3>Umidade da Vegetação</h3>
-        <p>Bandas espectrais infravermelhas detectam nível de estresse hídrico. Vegetação seca torna-se combustível. Quanto mais seca, maior o risco.</p>
-        <span class="tech-tag">SWIR · NIR · EVI</span>
-      </div>
-      <div class="tech-card fade-up">
-        <div class="tech-icon">🌿</div>
-        <h3>NDVI — Saúde da Vegetação</h3>
-        <p>Normalized Difference Vegetation Index: cálculo baseado em reflexão da luz. Valores baixos indicam vegetação degradada ou morta — alto risco.</p>
-        <span class="tech-tag">NDVI · SENTINEL-2</span>
-      </div>
-      <div class="tech-card fade-up">
-        <div class="tech-icon">🌧️</div>
-        <h3>Histórico Climático</h3>
-        <p>Ausência de chuva, baixa umidade do ar, calor extremo e vento forte compõem o cenário de risco. Séries históricas detectam padrões sazonais.</p>
-        <span class="tech-tag">ERA5 · CHIRPS</span>
-      </div>
-      <div class="tech-card fade-up">
-        <div class="tech-icon">🛰️</div>
-        <h3>Sensoriamento Remoto Orbital</h3>
-        <p>Constelações de satélites (TERRA, AQUA, Sentinel, Landsat) oferecem cobertura completa do território nacional com revisitas diárias.</p>
-        <span class="tech-tag">NASA · ESA · INPE</span>
-      </div>
-      <div class="tech-card fade-up">
-        <div class="tech-icon">🤖</div>
-        <h3>Modelo Preditivo com IA</h3>
-        <p>Algoritmo de Machine Learning cruza todas as variáveis e calcula probabilidade de queimada para as próximas 48–72 horas por região.</p>
-        <span class="tech-tag">ML · Random Forest · LSTM</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="objetivos" style="background:var(--bg)">
-  <div class="container">
-    <span class="section-tag fade-up">// objetivos</span>
-    <h2 class="section-title fade-up">O Que o FireWatcher se Propõe a Fazer</h2>
-    <p class="section-sub fade-up">Quatro pilares que transformam dados brutos de satélite em ação preventiva concreta.</p>
-    <div class="objectives-wrap">
-      <div class="obj-card fade-up">
-        <div class="obj-num">01</div>
-        <div class="obj-text">
-          <h3>Detectar Risco com 72h de Antecedência</h3>
-          <p>Antes que qualquer chama apareça, o sistema já sinaliza probabilidade crítica com base em variáveis ambientais convergentes — permitindo ação preventiva.</p>
-        </div>
-      </div>
-      <div class="obj-card fade-up">
-        <div class="obj-num">02</div>
-        <div class="obj-text">
-          <h3>Gerar Alertas por Nível de Risco</h3>
-          <p>Dashboard em tempo real classifica cada região monitorada em quatro níveis de alerta com cores padronizadas para tomada de decisão imediata.</p>
-          <div class="alert-levels">
-            <span class="level baixo">● Baixo</span>
-            <span class="level moderado">● Moderado</span>
-            <span class="level alto">● Alto</span>
-            <span class="level critico">● Crítico</span>
+            <span id="themeBtnLabel">Tema</span>
+          </button>
+          <div class="theme-dropdown" id="themeDropdown">
+            <button
+              class="theme-option active"
+              id="opt-dark"
+              onclick="setTheme('dark')"
+            >
+              <span class="swatch swatch-dark"></span> Dark
+            </button>
+            <button
+              class="theme-option"
+              id="opt-light"
+              onclick="setTheme('light')"
+            >
+              <span class="swatch swatch-light"></span> Light
+            </button>
+            <button
+              class="theme-option"
+              id="opt-ocean"
+              onclick="setTheme('ocean')"
+            >
+              <span class="swatch swatch-ocean"></span> Ocean
+            </button>
           </div>
         </div>
+        <a href="#demo" class="nav-cta">Ver Demo</a>
       </div>
-      <div class="obj-card fade-up">
-        <div class="obj-num">03</div>
-        <div class="obj-text">
-          <h3>Recomendar Ações Operacionais</h3>
-          <p>Para cada nível de alerta, o sistema sugere automaticamente ações: intensificar patrulhamento, acionar brigada local, emitir alerta municipal ou enviar drone de verificação.</p>
-        </div>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
       </div>
-      <div class="obj-card fade-up">
-        <div class="obj-num">04</div>
-        <div class="obj-text">
-          <h3>Priorizar Regiões para Fiscalização</h3>
-          <p>Com múltiplas áreas em risco simultâneo, o sistema ranqueia regiões por criticidade, otimizando o uso de recursos limitados dos órgãos ambientais.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </nav>
 
-<section id="quiz">
-  <div class="container">
-    <span class="section-tag fade-up" style="text-align:center;display:block">// quiz interativo</span>
-    <h2 class="section-title fade-up" style="text-align:center">Quanto Você Sabe sobre Queimadas?</h2>
-    <p class="section-sub fade-up" style="text-align:center;margin:0 auto 2.5rem">Teste seus conhecimentos sobre monitoramento ambiental, satélites e prevenção de incêndios.</p>
-    <div class="quiz-wrap fade-up" id="quizContainer">
-      <!-- Question screen -->
-      <div id="questionScreen">
-        <div class="quiz-header">
-          <span class="quiz-label" id="questionLabel">Pergunta 1 de 10</span>
-          <span class="quiz-score" id="scoreDisplay">Pontos: 0</span>
-        </div>
-        <div class="progress-bar-wrap">
-          <div class="progress-bar" id="progressBar" style="width:10%"></div>
-        </div>
-        <p class="quiz-question" id="questionText"></p>
-        <div class="quiz-options" id="optionsContainer"></div>
-        <div class="quiz-feedback" id="quizFeedback"></div>
-        <button class="quiz-next" id="nextBtn" onclick="nextQuestion()">Próxima Pergunta →</button>
-      </div>
-      <!-- Result screen -->
-      <div class="quiz-result" id="resultScreen">
-        <div class="result-ring" id="resultRing">
-          <div class="result-ring-inner">
-            <span class="result-score-num" id="resultNum">0</span>
-            <span class="result-score-total">de 10</span>
-          </div>
-        </div>
-        <div class="result-badge" id="resultBadge"></div>
-        <h3 class="result-title" id="resultTitle"></h3>
-        <p class="result-msg" id="resultMsg"></p>
-        <button class="quiz-restart" onclick="restartQuiz()">↺ Recomeçar</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="publico">
-  <div class="container">
-    <span class="section-tag fade-up">// público-alvo</span>
-    <h2 class="section-title fade-up">Quem Protegemos com o FireWatcher</h2>
-    <p class="section-sub fade-up">A solução impacta diretamente quem precisa agir rápido diante do risco ambiental — de agentes de campo a gestores públicos.</p>
-    <div class="audience-grid">
-      <div class="audience-card fade-up">
-        <div class="audience-icon">🏛️</div>
-        <h3>IBAMA & ICMBio</h3>
-        <p>Órgãos federais de proteção ambiental ganham inteligência preditiva para alocar equipes antes do foco.</p>
-      </div>
-      <div class="audience-card fade-up">
-        <div class="audience-icon">🚒</div>
-        <h3>Brigadas de Incêndio</h3>
-        <p>Equipes recebem alertas antecipados com coordenadas e nível de criticidade para mobilização preventiva.</p>
-      </div>
-      <div class="audience-card fade-up">
-        <div class="audience-icon">🏙️</div>
-        <h3>Municípios em Risco</h3>
-        <p>Prefeituras de regiões vulneráveis acessam o dashboard para planejar evacuações e alertas à população.</p>
-      </div>
-      <div class="audience-card fade-up">
-        <div class="audience-icon">🔬</div>
-        <h3>Pesquisadores & Academia</h3>
-        <p>Dados históricos e preditivos alimentam estudos climáticos, modelos de expansão e políticas públicas.</p>
-      </div>
-      <div class="audience-card fade-up">
-        <div class="audience-icon">🌾</div>
-        <h3>População Rural</h3>
-        <p>Agricultores e moradores de zonas de risco recebem avisos antecipados para proteger propriedades e famílias.</p>
-      </div>
-      <div class="audience-card fade-up">
-        <div class="audience-icon">🪶</div>
-        <h3>Comunidades Indígenas</h3>
-        <p>Territórios indígenas têm monitoramento especializado; alertas ajudam lideranças a organizar proteção das terras.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="beneficios">
-  <div class="container">
-    <span class="section-tag fade-up" style="text-align:center;display:block">// benefícios</span>
-    <h2 class="section-title fade-up" style="text-align:center">O Impacto Real da Prevenção</h2>
-    <p class="section-sub fade-up" style="text-align:center;margin:0 auto 3rem">Da biodiversidade à economia: o que muda quando agimos antes do fogo.</p>
-    <div class="benefits-grid">
-      <div class="benefit-card fade-up">
-        <div class="benefit-num">01</div>
-        <h3>Redução de Área Queimada</h3>
-        <p>Ação preventiva acionada antes do foco pode reduzir drasticamente a extensão dos danos. Cada hora de antecedência pode salvar centenas de hectares.</p>
-      </div>
-      <div class="benefit-card fade-up">
-        <div class="benefit-num">02</div>
-        <h3>Otimização de Recursos</h3>
-        <p>Órgãos com orçamento limitado direcionam brigadistas, drones e aeronaves exatamente para onde o risco é maior — sem desperdício.</p>
-      </div>
-      <div class="benefit-card fade-up">
-        <div class="benefit-num">03</div>
-        <h3>Proteção à Biodiversidade</h3>
-        <p>Florestas, biomas e espécies ameaçadas são protegidos por intervenção antes que o fogo destrua habitats insubstituíveis.</p>
-      </div>
-      <div class="benefit-card fade-up">
-        <div class="benefit-num">04</div>
-        <h3>Apoio à Decisão Pública</h3>
-        <p>Gestores públicos têm dados concretos para decretar estado de emergência, acionar forças estaduais ou solicitar apoio federal com embasamento científico.</p>
-      </div>
-      <div class="benefit-card fade-up">
-        <div class="benefit-num">05</div>
-        <h3>Transparência Ambiental</h3>
-        <p>Dados acessíveis a pesquisadores, jornalistas e sociedade civil. Monitoramento público fortalece a pressão por preservação.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="demo">
-  <div class="container">
-    <span class="section-tag fade-up">// demonstração</span>
-    <div class="demo-inner">
-      <div class="demo-text fade-up">
-        <h2 class="section-title">Veja o Sistema em Ação</h2>
-        <p class="section-sub">Protótipo funcional com mapa orbital em tempo real, painel de alertas por região, dados climáticos integrados e recomendações automáticas de resposta.</p>
-        <div class="demo-specs">
-          <div class="spec-row">
-            <span class="spec-icon">🗺️</span>
-            <div>
-              <strong>Mapa interativo com focos ativos</strong>
-              <span>Visualização georreferenciada de todo o território nacional com níveis de risco por cor</span>
+    <section id="problema" style="padding: 0">
+      <div id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-inner container">
+          <div class="hero-content fade-up">
+            <div class="hero-badge">
+              <span></span>Sistema em desenvolvimento
+            </div>
+            <h1 class="hero-title">
+              O Brasil queima.<br />
+              <span class="accent">Nós prevemos</span><br />
+              antes do fogo.
+            </h1>
+            <p class="hero-desc">
+              Em 2023, o Brasil registrou mais de
+              <strong>220 mil focos</strong> de incêndio. Os sistemas atuais são
+              <em>reativos</em> — detectam quando o desastre já começou. O
+              FireWatcher prevê o risco com até
+              <strong>72 horas de antecedência</strong> usando dados de
+              satélite.
+            </p>
+            <div class="hero-stats">
+              <div class="stat">
+                <div class="stat-num">220k+</div>
+                <div class="stat-label">focos em 2023</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">72h</div>
+                <div class="stat-label">antecedência</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">91%</div>
+                <div class="stat-label">precisão preditiva</div>
+              </div>
+            </div>
+            <div class="hero-btns">
+              <a href="#tecnologia" class="btn-primary">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+                Conheça a Solução
+              </a>
+              <a href="#demo" class="btn-outline">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3" />
+                </svg>
+                Ver Demo
+              </a>
             </div>
           </div>
-          <div class="spec-row">
-            <span class="spec-icon">📊</span>
-            <div>
-              <strong>Dashboard de variáveis em tempo real</strong>
-              <span>Temperatura, NDVI, umidade, vento e histórico de precipitação por região monitorada</span>
-            </div>
-          </div>
-          <div class="spec-row">
-            <span class="spec-icon">🤖</span>
-            <div>
-              <strong>IA Preditiva integrada</strong>
-              <span>Score de risco calculado automaticamente com janela de previsão de 48 a 72 horas</span>
+          <div class="hero-visual fade-up" style="animation-delay: 0.2s">
+            <div class="map-card" style="position: relative">
+              <div class="alert-badge">⚠ 3 ALERTAS ATIVOS</div>
+              <div class="map-header">
+                <div class="map-dot" style="background: #ef4444"></div>
+                <div class="map-dot" style="background: #eab308"></div>
+                <div class="map-dot" style="background: #22c55e"></div>
+                <span style="margin-left: 0.3rem"
+                  >FIREWATCHER — MONITOR ORBITAL</span
+                >
+              </div>
+              <div class="map-body">
+                <svg
+                  class="brazil-svg"
+                  viewBox="0 0 200 200"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M100 20 L140 25 L165 40 L180 70 L175 100 L160 120 L150 150 L130 170 L110 180 L90 175 L70 160 L55 140 L40 120 L30 90 L35 60 L55 40 L80 25 Z"
+                    fill="rgba(34,197,94,0.08)"
+                    stroke="rgba(34,197,94,0.25)"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M60 60 L80 55 L90 65 L85 80 L70 75 Z"
+                    fill="rgba(34,197,94,0.05)"
+                    stroke="rgba(34,197,94,0.15)"
+                    stroke-width="1"
+                  />
+                </svg>
+                <!-- Fire dots positioned over Brazil -->
+                <div class="fire-dot red" style="top: 42%; left: 58%"></div>
+
+                <div
+                  class="fire-dot yellow"
+                  style="top: 38%; left: 52%; animation-delay: 0.3s"
+                ></div>
+                <div
+                  class="fire-dot orange"
+                  style="top: 60%; left: 50%; animation-delay: 0.9s"
+                ></div>
+              </div>
+              <div class="map-footer">
+                <div class="legend-item">
+                  <div class="legend-dot" style="background: #ef4444"></div>
+                  Crítico
+                </div>
+                <div class="legend-item">
+                  <div class="legend-dot" style="background: #f97316"></div>
+                  Alto
+                </div>
+                <div class="legend-item">
+                  <div class="legend-dot" style="background: #eab308"></div>
+                  Moderado
+                </div>
+                <div class="legend-item">
+                  <div class="legend-dot" style="background: #22c55e"></div>
+                  Baixo
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <a
-          href="https://liviapisanello.github.io/wildfire-monitor/"
-          class="btn-demo"
-          target="_blank"
-          rel="noopener noreferrer"
+      </div>
+    </section>
+
+    <section id="tecnologia">
+      <div class="container">
+        <span class="section-tag fade-up">// tecnologia</span>
+        <h2 class="section-title fade-up">O Satélite Vê o que o Olho Não Vê</h2>
+        <p class="section-sub fade-up">
+          Seis variáveis ambientais capturadas por sensoriamento orbital são
+          cruzadas em tempo real para calcular o risco de incêndio com precisão
+          inédita.
+        </p>
+        <div class="tech-grid">
+          <div class="tech-card fade-up">
+            <div class="tech-icon">🌡️</div>
+            <h3>Temperatura Superficial</h3>
+            <p>
+              Satélites medem radiação térmica emitida pela superfície. Áreas
+              com temperatura muito acima do normal indicam condição propícia ao
+              fogo.
+            </p>
+            <span class="tech-tag">TERRA/MODIS · LST</span>
+          </div>
+          <div class="tech-card fade-up">
+            <div class="tech-icon">💧</div>
+            <h3>Umidade da Vegetação</h3>
+            <p>
+              Bandas espectrais infravermelhas detectam nível de estresse
+              hídrico. Vegetação seca torna-se combustível. Quanto mais seca,
+              maior o risco.
+            </p>
+            <span class="tech-tag">SWIR · NIR · EVI</span>
+          </div>
+          <div class="tech-card fade-up">
+            <div class="tech-icon">🌿</div>
+            <h3>NDVI — Saúde da Vegetação</h3>
+            <p>
+              Normalized Difference Vegetation Index: cálculo baseado em
+              reflexão da luz. Valores baixos indicam vegetação degradada ou
+              morta — alto risco.
+            </p>
+            <span class="tech-tag">NDVI · SENTINEL-2</span>
+          </div>
+          <div class="tech-card fade-up">
+            <div class="tech-icon">🌧️</div>
+            <h3>Histórico Climático</h3>
+            <p>
+              Ausência de chuva, baixa umidade do ar, calor extremo e vento
+              forte compõem o cenário de risco. Séries históricas detectam
+              padrões sazonais.
+            </p>
+            <span class="tech-tag">ERA5 · CHIRPS</span>
+          </div>
+          <div class="tech-card fade-up">
+            <div class="tech-icon">🛰️</div>
+            <h3>Sensoriamento Remoto Orbital</h3>
+            <p>
+              Constelações de satélites (TERRA, AQUA, Sentinel, Landsat)
+              oferecem cobertura completa do território nacional com revisitas
+              diárias.
+            </p>
+            <span class="tech-tag">NASA · ESA · INPE</span>
+          </div>
+          <div class="tech-card fade-up">
+            <div class="tech-icon">🤖</div>
+            <h3>Modelo Preditivo com IA</h3>
+            <p>
+              Algoritmo de Machine Learning cruza todas as variáveis e calcula
+              probabilidade de queimada para as próximas 48–72 horas por região.
+            </p>
+            <span class="tech-tag">ML · Random Forest · LSTM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="objetivos" style="background: var(--bg)">
+      <div class="container">
+        <span class="section-tag fade-up">// objetivos</span>
+        <h2 class="section-title fade-up">
+          O Que o FireWatcher se Propõe a Fazer
+        </h2>
+        <p class="section-sub fade-up">
+          Quatro pilares que transformam dados brutos de satélite em ação
+          preventiva concreta.
+        </p>
+        <div class="objectives-wrap">
+          <div class="obj-card fade-up">
+            <div class="obj-num">01</div>
+            <div class="obj-text">
+              <h3>Detectar Risco com 72h de Antecedência</h3>
+              <p>
+                Antes que qualquer chama apareça, o sistema já sinaliza
+                probabilidade crítica com base em variáveis ambientais
+                convergentes — permitindo ação preventiva.
+              </p>
+            </div>
+          </div>
+          <div class="obj-card fade-up">
+            <div class="obj-num">02</div>
+            <div class="obj-text">
+              <h3>Gerar Alertas por Nível de Risco</h3>
+              <p>
+                Dashboard em tempo real classifica cada região monitorada em
+                quatro níveis de alerta com cores padronizadas para tomada de
+                decisão imediata.
+              </p>
+              <div class="alert-levels">
+                <span class="level baixo">● Baixo</span>
+                <span class="level moderado">● Moderado</span>
+                <span class="level alto">● Alto</span>
+                <span class="level critico">● Crítico</span>
+              </div>
+            </div>
+          </div>
+          <div class="obj-card fade-up">
+            <div class="obj-num">03</div>
+            <div class="obj-text">
+              <h3>Recomendar Ações Operacionais</h3>
+              <p>
+                Para cada nível de alerta, o sistema sugere automaticamente
+                ações: intensificar patrulhamento, acionar brigada local, emitir
+                alerta municipal ou enviar drone de verificação.
+              </p>
+            </div>
+          </div>
+          <div class="obj-card fade-up">
+            <div class="obj-num">04</div>
+            <div class="obj-text">
+              <h3>Priorizar Regiões para Fiscalização</h3>
+              <p>
+                Com múltiplas áreas em risco simultâneo, o sistema ranqueia
+                regiões por criticidade, otimizando o uso de recursos limitados
+                dos órgãos ambientais.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz">
+      <div class="container">
+        <span
+          class="section-tag fade-up"
+          style="text-align: center; display: block"
+          >// quiz interativo</span
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-            <polyline points="15 3 21 3 21 9"/>
-            <line x1="10" y1="14" x2="21" y2="3"/>
-          </svg>
-          Acessar Protótipo Online
-        </a>
-      </div>
-      <div class="video-wrap fade-up">
-        <div class="video-topbar">
-          <div class="topbar-dot" style="background:#ef4444"></div>
-          <div class="topbar-dot" style="background:#eab308"></div>
-          <div class="topbar-dot" style="background:#22c55e"></div>
-          <span class="topbar-title">FIREWATCHER — SISTEMA DE MONITORAMENTO AMBIENTAL</span>
+        <h2 class="section-title fade-up" style="text-align: center">
+          Quanto Você Sabe sobre Queimadas?
+        </h2>
+        <p
+          class="section-sub fade-up"
+          style="text-align: center; margin: 0 auto 2.5rem"
+        >
+          Teste seus conhecimentos sobre monitoramento ambiental, satélites e
+          prevenção de incêndios.
+        </p>
+        <div class="quiz-wrap fade-up" id="quizContainer">
+          <!-- Question screen -->
+          <div id="questionScreen">
+            <div class="quiz-header">
+              <span class="quiz-label" id="questionLabel"
+                >Pergunta 1 de 10</span
+              >
+              <span class="quiz-score" id="scoreDisplay">Pontos: 0</span>
+            </div>
+            <div class="progress-bar-wrap">
+              <div
+                class="progress-bar"
+                id="progressBar"
+                style="width: 10%"
+              ></div>
+            </div>
+            <p class="quiz-question" id="questionText"></p>
+            <div class="quiz-options" id="optionsContainer"></div>
+            <div class="quiz-feedback" id="quizFeedback"></div>
+            <button class="quiz-next" id="nextBtn" onclick="nextQuestion()">
+              Próxima Pergunta →
+            </button>
+          </div>
+          <!-- Result screen -->
+          <div class="quiz-result" id="resultScreen">
+            <div class="result-ring" id="resultRing">
+              <div class="result-ring-inner">
+                <span class="result-score-num" id="resultNum">0</span>
+                <span class="result-score-total">de 10</span>
+              </div>
+            </div>
+            <div class="result-badge" id="resultBadge"></div>
+            <h3 class="result-title" id="resultTitle"></h3>
+            <p class="result-msg" id="resultMsg"></p>
+            <button class="quiz-restart" onclick="restartQuiz()">
+              ↺ Recomeçar
+            </button>
+          </div>
         </div>
-        <video autoplay muted loop playsinline>
-          <source src="./assets/demo-firewatcher.mp4" type="video/mp4">
-        </video>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="aplicacao">
-  <div class="container">
-    <span class="section-tag fade-up">// aplicação no dia a dia</span>
-    <h2 class="section-title fade-up">Como o FireWatcher Funciona na Prática</h2>
-    <p class="section-sub fade-up">Do dado bruto de satélite à ação preventiva em campo: um fluxo contínuo e automatizado.</p>
-    <div class="flow-steps">
-      <div class="flow-step fade-up">
-        <div class="step-circle">🛰️</div>
-        <h4>Satélite Coleta</h4>
-        <p>Dados orbitais de temperatura, NDVI, umidade e clima são capturados continuamente</p>
+    <section id="publico">
+      <div class="container">
+        <span class="section-tag fade-up">// público-alvo</span>
+        <h2 class="section-title fade-up">Quem Protegemos com o FireWatcher</h2>
+        <p class="section-sub fade-up">
+          A solução impacta diretamente quem precisa agir rápido diante do risco
+          ambiental — de agentes de campo a gestores públicos.
+        </p>
+        <div class="audience-grid">
+          <div class="audience-card fade-up">
+            <div class="audience-icon">🏛️</div>
+            <h3>IBAMA & ICMBio</h3>
+            <p>
+              Órgãos federais de proteção ambiental ganham inteligência
+              preditiva para alocar equipes antes do foco.
+            </p>
+          </div>
+          <div class="audience-card fade-up">
+            <div class="audience-icon">🚒</div>
+            <h3>Brigadas de Incêndio</h3>
+            <p>
+              Equipes recebem alertas antecipados com coordenadas e nível de
+              criticidade para mobilização preventiva.
+            </p>
+          </div>
+          <div class="audience-card fade-up">
+            <div class="audience-icon">🏙️</div>
+            <h3>Municípios em Risco</h3>
+            <p>
+              Prefeituras de regiões vulneráveis acessam o dashboard para
+              planejar evacuações e alertas à população.
+            </p>
+          </div>
+          <div class="audience-card fade-up">
+            <div class="audience-icon">🔬</div>
+            <h3>Pesquisadores & Academia</h3>
+            <p>
+              Dados históricos e preditivos alimentam estudos climáticos,
+              modelos de expansão e políticas públicas.
+            </p>
+          </div>
+          <div class="audience-card fade-up">
+            <div class="audience-icon">🌾</div>
+            <h3>População Rural</h3>
+            <p>
+              Agricultores e moradores de zonas de risco recebem avisos
+              antecipados para proteger propriedades e famílias.
+            </p>
+          </div>
+          <div class="audience-card fade-up">
+            <div class="audience-icon">🪶</div>
+            <h3>Comunidades Indígenas</h3>
+            <p>
+              Territórios indígenas têm monitoramento especializado; alertas
+              ajudam lideranças a organizar proteção das terras.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="flow-step fade-up">
-        <div class="step-circle">⚙️</div>
-        <h4>Sistema Analisa</h4>
-        <p>Variáveis são processadas e normalizadas pelo pipeline de dado 
+    </section>
+
+    <section id="beneficios">
+      <div class="container">
+        <span
+          class="section-tag fade-up"
+          style="text-align: center; display: block"
+          >// benefícios</span
+        >
+        <h2 class="section-title fade-up" style="text-align: center">
+          O Impacto Real da Prevenção
+        </h2>
+        <p
+          class="section-sub fade-up"
+          style="text-align: center; margin: 0 auto 3rem"
+        >
+          Da biodiversidade à economia: o que muda quando agimos antes do fogo.
+        </p>
+        <div class="benefits-grid">
+          <div class="benefit-card fade-up">
+            <div class="benefit-num">01</div>
+            <h3>Redução de Área Queimada</h3>
+            <p>
+              Ação preventiva acionada antes do foco pode reduzir drasticamente
+              a extensão dos danos. Cada hora de antecedência pode salvar
+              centenas de hectares.
+            </p>
+          </div>
+          <div class="benefit-card fade-up">
+            <div class="benefit-num">02</div>
+            <h3>Otimização de Recursos</h3>
+            <p>
+              Órgãos com orçamento limitado direcionam brigadistas, drones e
+              aeronaves exatamente para onde o risco é maior — sem desperdício.
+            </p>
+          </div>
+          <div class="benefit-card fade-up">
+            <div class="benefit-num">03</div>
+            <h3>Proteção à Biodiversidade</h3>
+            <p>
+              Florestas, biomas e espécies ameaçadas são protegidos por
+              intervenção antes que o fogo destrua habitats insubstituíveis.
+            </p>
+          </div>
+          <div class="benefit-card fade-up">
+            <div class="benefit-num">04</div>
+            <h3>Apoio à Decisão Pública</h3>
+            <p>
+              Gestores públicos têm dados concretos para decretar estado de
+              emergência, acionar forças estaduais ou solicitar apoio federal
+              com embasamento científico.
+            </p>
+          </div>
+          <div class="benefit-card fade-up">
+            <div class="benefit-num">05</div>
+            <h3>Transparência Ambiental</h3>
+            <p>
+              Dados acessíveis a pesquisadores, jornalistas e sociedade civil.
+              Monitoramento público fortalece a pressão por preservação.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="galeria">
       <div class="container">
         <span class="section-tag">// monitoramento ambiental</span>
-
         <h2 class="section-title">A Tecnologia a Serviço da Preservação</h2>
-
         <p class="section-sub">
           Imagens que representam o monitoramento de queimadas, a observação por
           satélites e a proteção dos biomas brasileiros.
         </p>
-
         <div class="slideshow">
           <img
             src="https://images.unsplash.com/photo-1473773508845-188df298d2d1"
             class="slide active"
             alt="Floresta monitorada"
           />
-
           <img
             src="https://images.unsplash.com/photo-1511497584788-876760111969"
             class="slide"
             alt="Satélite em órbita"
           />
-
           <img
             src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
             class="slide"
             alt="Natureza preservada"
           />
-
           <div class="slide-indicators">
             <span class="indicator active"></span>
-            <span class="indicator"></span>
-            <span class="indicator"></span>
+            <span class="indicator"></span> <span class="indicator"></span>
           </div>
         </div>
       </div>
@@ -535,79 +660,222 @@
           </div>
         </div>
       </div>
-      <div class="flow-step fade-up">
-        <div class="step-circle">🤖</div>
-        <h4>IA Calcula Risco</h4>
-        <p>Modelo preditivo gera score de probabilidade para 48–72h por região</p>
-      </div>
-      <div class="flow-step fade-up">
-        <div class="step-circle">📊</div>
-        <h4>Dashboard Alerta</h4>
-        <p>Mapa exibe nível de risco em tempo real: Baixo, Moderado, Alto ou Crítico</p>
-      </div>
-      <div class="flow-step fade-up">
-        <div class="step-circle">📋</div>
-        <h4>Órgão Recebe Recomendação</h4>
-        <p>Sistema sugere ações operacionais específicas para o nível de risco detectado</p>
-      </div>
-      <div class="flow-step fade-up">
-        <div class="step-circle">🚒</div>
-        <h4>Ação Preventiva</h4>
-        <p>Brigada mobilizada, drone enviado, alerta emitido — tudo antes do foco iniciar</p>
-      </div>
-    </div>
+    </section>
+
+    <section id="aplicacao">
+      <div class="container">
+        <span class="section-tag fade-up">// aplicação no dia a dia</span>
+        <h2 class="section-title fade-up">
+          Como o FireWatcher Funciona na Prática
+        </h2>
+        <p class="section-sub fade-up">
+          Do dado bruto de satélite à ação preventiva em campo: um fluxo
+          contínuo e automatizado.
+        </p>
+        <div class="flow-steps">
+          <div class="flow-step fade-up">
+            <div class="step-circle">🛰️</div>
+            <h4>Satélite Coleta</h4>
+            <p>
+              Dados orbitais de temperatura, NDVI, umidade e clima são
+              capturados continuamente
+            </p>
+          </div>
+          <div class="flow-step fade-up">
+            <div class="step-circle">⚙️</div>
+            <h4>Sistema Analisa</h4>
+            <p>
+              Variáveis são processadas e normalizadas pelo pipeline de dados
+            </p>
+          </div>
+          <div class="flow-step fade-up">
+            <div class="step-circle">🤖</div>
+            <h4>IA Calcula Risco</h4>
+            <p>
+              Modelo preditivo gera score de probabilidade para 48–72h por
+              região
+            </p>
+          </div>
+          <div class="flow-step fade-up">
+            <div class="step-circle">📊</div>
+            <h4>Dashboard Alerta</h4>
+            <p>
+              Mapa exibe nível de risco em tempo real: Baixo, Moderado, Alto ou
+              Crítico
+            </p>
+          </div>
+          <div class="flow-step fade-up">
+            <div class="step-circle">📋</div>
+            <h4>Órgão Recebe Recomendação</h4>
+            <p>
+              Sistema sugere ações operacionais específicas para o nível de
+              risco detectado
+            </p>
+          </div>
+          <div class="flow-step fade-up">
+            <div class="step-circle">🚒</div>
+            <h4>Ação Preventiva</h4>
+            <p>
+              Brigada mobilizada, drone enviado, alerta emitido — tudo antes do
+              foco iniciar
+            </p>
+          </div>
+        </div>
 
         <div class="example-box fade-up">
-      <div class="example-data">
-        <span class="ex-title">📍 Exemplo Prático — Sul do Pará</span>
-        <div class="ex-tag">🌧️ 14 dias sem chuva</div>
-        <div class="ex-tag">🌡️ Temperatura superficial: 41°C</div>
-        <div class="ex-tag">🌿 NDVI: queda de 28%</div>
-        <div class="ex-tag">💨 Vento elevado</div>
-        <div style="margin-top:.8rem;font-family:var(--font-mono);font-size:.75rem;color:var(--muted)">
-          → Recomendações: deslocar brigada preventiva · aumentar vigilância aérea · emitir alerta ambiental regional
+          <div class="example-data">
+            <span class="ex-title">📍 Exemplo Prático — Sul do Pará</span>
+            <div class="ex-tag">🌧️ 14 dias sem chuva</div>
+            <div class="ex-tag">🌡️ Temperatura superficial: 41°C</div>
+            <div class="ex-tag">🌿 NDVI: queda de 28%</div>
+            <div class="ex-tag">💨 Vento elevado</div>
+            <div
+              style="
+                margin-top: 0.8rem;
+                font-family: var(--font-mono);
+                font-size: 0.75rem;
+                color: var(--muted);
+              "
+            >
+              → Recomendações: deslocar brigada preventiva · aumentar vigilância
+              aérea · emitir alerta ambiental regional
+            </div>
+          </div>
+          <div class="critical-alert">
+            <div class="crit-pct">89%</div>
+            <div class="crit-label">risco em 48h</div>
+            <div class="crit-badge">⚠ CRÍTICO</div>
+          </div>
         </div>
       </div>
-      <div class="critical-alert">
-        <div class="crit-pct">89%</div>
-        <div class="crit-label">risco em 48h</div>
-        <div class="crit-badge">⚠ CRÍTICO</div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
+    <section id="newsletter">
+      <div class="container">
+        <div class="newsletter-card">
+          <span class="section-tag">// newsletter</span>
 
-<footer>
-  <div class="footer-inner container">
-    <div class="footer-brand">
-      <div class="nav-logo">
-        <svg viewBox="0 0 28 28" fill="none" width="24" height="24">
-          <circle cx="14" cy="14" r="6" stroke="#22c55e" stroke-width="2"/>
-          <path d="M14 2v4M14 22v4M2 14h4M22 14h4" stroke="#22c55e" stroke-width="2" stroke-linecap="round"/>
-          <path d="M5.5 5.5l2.8 2.8M19.7 19.7l2.8 2.8M5.5 22.5l2.8-2.8M19.7 8.3l2.8-2.8" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        FireWatcher
+          <h2 class="section-title">
+            Receba Alertas e Atualizações do FireWatcher
+          </h2>
+
+          <p class="newsletter-text">
+            Cadastre-se para acompanhar novidades do projeto, relatórios
+            ambientais e alertas sobre monitoramento de queimadas.
+          </p>
+
+          <form id="newsletterForm" class="newsletter-form">
+            <div class="newsletter-group">
+              <input type="text" id="newsletterName" placeholder="Seu nome" />
+
+              <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Seu e-mail"
+              />
+            </div>
+
+            <button type="submit" class="newsletter-btn">Inscrever-se</button>
+
+            <p id="newsletterMessage" class="newsletter-message"></p>
+          </form>
+        </div>
       </div>
-      <p>Sistema Preditivo de Queimadas por Sensoriamento Orbital. Monitoramento ambiental inteligente para um Brasil menos vulnerável.</p>
-      <div class="footer-year">© 2026 · FireWatcher Project</div>
-    </div>
-    <div class="footer-team">
-      <h4>Integrantes do Grupo</h4>
-      <ul class="team-list">
-        <li>Gustavo Pereira &nbsp;·&nbsp; <span style="font-family:var(--font-mono);color:var(--muted);font-size:.82rem">RM: 570549</span></li>
-        <li>Lara Beatriz &nbsp;·&nbsp; <span style="font-family:var(--font-mono);color:var(--muted);font-size:.82rem">RM: 572589</span></li>
-        <li>Lívia Laur &nbsp;·&nbsp; <span style="font-family:var(--font-mono);color:var(--muted);font-size:.82rem">RM: 569017</span></li>
-        <li>Luca Baccari &nbsp;·&nbsp; <span style="font-family:var(--font-mono);color:var(--muted);font-size:.82rem">RM: 569807</span></li>
-        <li>Rafael Dias &nbsp;·&nbsp; <span style="font-family:var(--font-mono);color:var(--muted);font-size:.82rem">RM: 570504</span></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom container">
-    <span>FireWatcher · Sistema de Monitoramento Ambiental</span>
-    <span>Desenvolvido como projeto acadêmico · 2026</span>
-  </div>
-</footer>
-<script src="script.js"></script>
-</body>
+    </section>
+
+    <footer>
+      <div class="footer-inner container">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <svg viewBox="0 0 28 28" fill="none" width="24" height="24">
+              <circle cx="14" cy="14" r="6" stroke="#22c55e" stroke-width="2" />
+              <path
+                d="M14 2v4M14 22v4M2 14h4M22 14h4"
+                stroke="#22c55e"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M5.5 5.5l2.8 2.8M19.7 19.7l2.8 2.8M5.5 22.5l2.8-2.8M19.7 8.3l2.8-2.8"
+                stroke="#22c55e"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+            FireWatcher
+          </div>
+          <p>
+            Sistema Preditivo de Queimadas por Sensoriamento Orbital.
+            Monitoramento ambiental inteligente para um Brasil menos vulnerável.
+          </p>
+          <div class="footer-year">© 2026 · FireWatcher Project</div>
+        </div>
+        <div class="footer-team">
+          <h4>Integrantes do Grupo</h4>
+          <ul class="team-list">
+            <li>
+              Gustavo Pereira &nbsp;·&nbsp;
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  color: var(--muted);
+                  font-size: 0.82rem;
+                "
+                >RM: 570549</span
+              >
+            </li>
+            <li>
+              Lara Beatriz &nbsp;·&nbsp;
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  color: var(--muted);
+                  font-size: 0.82rem;
+                "
+                >RM: 572589</span
+              >
+            </li>
+            <li>
+              Lívia Laur &nbsp;·&nbsp;
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  color: var(--muted);
+                  font-size: 0.82rem;
+                "
+                >RM: 569017</span
+              >
+            </li>
+            <li>
+              Luca Baccari &nbsp;·&nbsp;
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  color: var(--muted);
+                  font-size: 0.82rem;
+                "
+                >RM: 569807</span
+              >
+            </li>
+            <li>
+              Rafael Dias &nbsp;·&nbsp;
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  color: var(--muted);
+                  font-size: 0.82rem;
+                "
+                >RM: 570504</span
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom container">
+        <span>FireWatcher · Sistema de Monitoramento Ambiental</span>
+        <span>Desenvolvido como projeto acadêmico · 2026</span>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>

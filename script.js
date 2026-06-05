@@ -165,7 +165,6 @@ function showResult() {
   const rs = document.getElementById("resultScreen");
   rs.className = "quiz-result show";
   document.getElementById("resultNum").textContent = score;
-
   const deg = (score / 10) * 360;
   document.getElementById("resultRing").style.background =
     `conic-gradient(var(--green) ${deg}deg, rgba(34,197,94,.1) ${deg}deg)`;

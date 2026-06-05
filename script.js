@@ -165,7 +165,6 @@ function showResult() {
   const rs = document.getElementById("resultScreen");
   rs.className = "quiz-result show";
   document.getElementById("resultNum").textContent = score;
-  // Animate ring
   const deg = (score / 10) * 360;
   document.getElementById("resultRing").style.background =
     `conic-gradient(var(--green) ${deg}deg, rgba(34,197,94,.1) ${deg}deg)`;
@@ -233,7 +232,6 @@ function toggleMenu() {
 
 renderQuestion();
 
-// ─── THEME SWITCHER ──────────────────────────────────────────────
 const THEMES = {
   dark: { label: "Dark", icon: "🌑" },
   light: { label: "Light", icon: "☀️" },
@@ -249,7 +247,6 @@ const NAVBAR_BG = {
 let currentTheme = localStorage.getItem("fw-theme") || "dark";
 
 function applyTheme(theme) {
-  // Set data-theme on <html>
   document.documentElement.setAttribute(
     "data-theme",
     theme === "dark" ? "" : theme,
@@ -260,21 +257,17 @@ function applyTheme(theme) {
     document.documentElement.setAttribute("data-theme", theme);
   }
 
-  // Update button label
   const t = THEMES[theme] || THEMES.dark;
   const lbl = document.getElementById("themeBtnLabel");
   if (lbl) lbl.textContent = t.icon + " " + t.label;
 
-  // Update active state on options
   Object.keys(THEMES).forEach((k) => {
     const opt = document.getElementById("opt-" + k);
     if (opt) opt.classList.toggle("active", k === theme);
   });
 
-  // Fix navbar background immediately based on scroll position
   updateNavbarBg(theme);
 
-  // Persist choice
   localStorage.setItem("fw-theme", theme);
   currentTheme = theme;
 }
@@ -294,7 +287,6 @@ function closeThemeDropdown() {
   if (dd) dd.classList.remove("open");
 }
 
-// Close dropdown when clicking outside
 document.addEventListener("click", function (e) {
   const switcher = document.getElementById("themeSwitcher");
   if (switcher && !switcher.contains(e.target)) {
@@ -302,7 +294,6 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// ─── NAVBAR SCROLL (theme-aware override) ────────────────────────
 function updateNavbarBg(theme) {
   const nb = document.getElementById("navbar");
   if (!nb) return;
@@ -310,12 +301,10 @@ function updateNavbarBg(theme) {
   nb.style.background = window.scrollY > 50 ? bg.scrolled : bg.base;
 }
 
-// Override the previous scroll listener to be theme-aware
 window.removeEventListener("scroll", window._fwScrollHandler);
 window._fwScrollHandler = () => updateNavbarBg(currentTheme);
 window.addEventListener("scroll", window._fwScrollHandler);
 
-// ─── INIT THEME ──────────────────────────────────────────────────
 applyTheme(currentTheme);
 
 const newsletterForm = document.getElementById("newsletterForm");
@@ -359,3 +348,20 @@ if (newsletterForm) {
     newsletterForm.reset();
   });
 }
+
+const slides = document.querySelectorAll(".slide");
+const indicators = document.querySelectorAll(".indicator");
+
+let currentSlide = 0;
+
+function changeSlide() {
+  slides[currentSlide].classList.remove("active");
+  indicators[currentSlide].classList.remove("active");
+
+  currentSlide = (currentSlide + 1) % slides.length;
+
+  slides[currentSlide].classList.add("active");
+  indicators[currentSlide].classList.add("active");
+}
+
+setInterval(changeSlide, 4000);

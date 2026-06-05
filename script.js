@@ -222,12 +222,10 @@ window.addEventListener("scroll", () => {
 
 function toggleMenu() {
   const links = document.querySelector(".nav-links");
-  const cta = document.querySelector(".nav-cta");
-  const open = links.style.display === "flex";
-  links.style.cssText = open
-    ? ""
-    : "display:flex;flex-direction:column;position:fixed;top:60px;left:0;right:0;background:rgba(10,14,23,0.98);padding:1.5rem;gap:.5rem;border-bottom:1px solid rgba(255,255,255,.08)";
-  if (!open && cta) cta.style.display = "none";
+  const hamburger = document.getElementById("hamburger");
+  const open = links.classList.contains("open");
+  links.classList.toggle("open", !open);
+  hamburger.classList.toggle("active", !open);
 }
 
 renderQuestion();

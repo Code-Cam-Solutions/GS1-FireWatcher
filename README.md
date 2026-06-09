@@ -112,11 +112,11 @@ Ou utilize uma extensão como Live Server no VS Code para executar localmente.
 
 ## Equipe
 
-Lívia Laur – RM: 569017 
-Rafael Dias – RM: 570504 
-Lara Beatriz – RM: 572589 
-Gustavo Pereira – RM: 570549 
-Luca Baccari – RM: 569807
+- Lívia Laur – RM: 569017 
+- Rafael Dias – RM: 570504 
+- Lara Beatriz – RM: 572589 
+- Gustavo Pereira – RM: 570549 
+- Luca Baccari – RM: 569807
 
 ## Uso de Inteligência Artificial
 
